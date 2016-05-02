@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0-rc2-*"
+    },
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore.InMemory": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-*",
+     "Microsoft.EntityFrameworkCore.Tools": {
+      "version": "1.0.0-*",
+      "type": "build"
+    }
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "portable-net451+win8"
+      ]
+    }
+  },
+  "content": [
+    "config.json",
+    "docker-start.sh"
+  ],
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools": {
+      "version": "1.0.0-*",
+      "imports": ["portable-net451+win8"]
+    }
+  }
+}
