@@ -1,0 +1,36 @@
+﻿{
+  "version": "1.0.0-*",
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0-*"
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-20745",
+    "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0-rc2-20745",
+    "Microsoft.EntityFrameworkCore.Tools": {
+      "version": "1.0.0-rc2-20745",
+      "type": "build"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "portable-net451+win8"
+      ]
+    }
+  },
+
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools": {
+      "version": "1.0.0-rc2-20745",
+      "imports": [
+        "portable-net451+win8"
+      ]
+    }
+  }
+}
