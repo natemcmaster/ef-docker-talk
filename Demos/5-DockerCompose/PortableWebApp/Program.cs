@@ -11,7 +11,7 @@ namespace PortableWebApp
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
-                .UseUrls("http://0.0.0.0:5000") // important! Kestrel doesn't bind to "localhost"
+                .UseUrls("http://0.0.0.0:5000") // important! Kestrel can't bind to "localhost" inside a docker container
                 .Build();
 
             host.Run();

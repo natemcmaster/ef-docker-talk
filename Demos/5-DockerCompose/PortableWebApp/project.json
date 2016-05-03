@@ -6,16 +6,16 @@
   "dependencies": {
     "Microsoft.NETCore.App": {
       "type": "platform",
-      "version": "1.0.0-rc2-3002520"
+      "version": "1.0.0-*"
     },
-    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-rc2-20000",
-    "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-20745",
-    "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-20745",
-    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-20745",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-20745",
-    "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-20745",
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0-*",
+    "Microsoft.AspNetCore.Mvc": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-*",
      "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-rc2-20745",
+      "version": "1.0.0-*",
       "type": "build"
     }
   },
@@ -32,7 +32,7 @@
   ],
   "tools": {
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-rc2-20745",
+      "version": "1.0.0-*",
       "imports": ["portable-net451+win8"]
     }
   }

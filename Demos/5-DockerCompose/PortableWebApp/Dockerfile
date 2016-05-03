@@ -9,4 +9,3 @@ EXPOSE 5000
 
 CMD chmod +x ./docker-start.sh
 CMD ./docker-start.sh
-

@@ -9,10 +9,10 @@
       "type": "platform",
       "version": "1.0.0-*"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-20745",
-    "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0-rc2-20745",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.0.0-*",
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-rc2-20745",
+      "version": "1.0.0-*",
       "type": "build"
     }
   },
@@ -27,7 +27,7 @@
 
   "tools": {
     "Microsoft.EntityFrameworkCore.Tools": {
-      "version": "1.0.0-rc2-20745",
+      "version": "1.0.0-*",
       "imports": [
         "portable-net451+win8"
       ]

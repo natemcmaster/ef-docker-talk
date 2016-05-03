@@ -6,6 +6,7 @@ namespace PortableWebApp
     public class HomeController : Controller
     {
         private readonly StoreContext _context;
+        
         public HomeController(StoreContext context)
         {
             _context = context;
