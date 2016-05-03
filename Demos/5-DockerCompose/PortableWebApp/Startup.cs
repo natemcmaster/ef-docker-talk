@@ -15,6 +15,8 @@ namespace PortableWebApp
         private IConfiguration _config;
         public Startup(IHostingEnvironment env)
         {
+            // TODO add environment variables
+            
             _config = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("config.json")
@@ -25,47 +27,38 @@ namespace PortableWebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddLogging();
+            services.AddMvc();
 
-            services.AddDbContext<StoreContext>(
-               o => o.UseNpgsql(_config["Npgsql:ConnectionString"]));
+            // TODO add dbcontext
+            services.AddDbContext<StoreContext>(o => o.UseNpgsql(_config["Npgsql:ConnectionString"]));
 
         }
 
+            // TODO get options from DI
         public void Configure(IApplicationBuilder app,
                 DbContextOptions<StoreContext> options,
-                ILoggerFactory loggerFactory,
-                IHostingEnvironment env)
+                ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(LogLevel.Information);
 
-            SeedDatabase(options, loggerFactory.CreateLogger("SeedDatabase"));
-
-            app.Run(async context =>
-            {
-                context.Response.ContentType = "application/json; charset=UTF-8";
-                using (var db = new StoreContext(options))
-                {
-                    var customers = db.Customers.ToArray();
-                    await context.Response.WriteAsync(JsonConvert.SerializeObject(customers));
-                }
-            });
+            app.UseMvcWithDefaultRoute();
+            
+            InitializeDatabase(options, loggerFactory.CreateLogger("InitializeDatabase"));
         }
 
-        private void SeedDatabase(DbContextOptions<StoreContext> options, ILogger logger)
+        private void InitializeDatabase(DbContextOptions<StoreContext> options, ILogger logger)
         {
             using (var db = new StoreContext(options))
             {
-                // This is currently the only way to run migrations when
-                // the app is inside a docker container.
-                // in most other usages, it is better to use 'dotnet ef database update'
-                // or to use 'dotnet ef migrations script' to apply migrations
+                // TODO apply migrations
                 db.Database.Migrate();
-
 
                 if (db.Customers.Count() == 0)
                 {
+                    // TODO add seed data
                     db.AddRange(SeedData.CreateCustomers());
                     var changes = db.SaveChanges();
+                    
                     logger.LogInformation($"Added {changes} new customers to database");
                 }
                 else
