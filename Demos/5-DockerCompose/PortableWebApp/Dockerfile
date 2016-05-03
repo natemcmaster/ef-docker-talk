@@ -4,8 +4,9 @@ WORKDIR /opt/app
 
 ENV ASPNETCORE_ENVIRONMENT Production
 
-ADD "./bin/Release/netcoreapp1.0/publish/" .
+COPY "./bin/Release/netcoreapp1.0/publish/" .
 EXPOSE 5000
 
+CMD chmod +x ./docker-start.sh
 CMD ./docker-start.sh
 
