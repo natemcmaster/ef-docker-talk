@@ -1,20 +1,23 @@
 ﻿{
   "version": "1.0.0-*",
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true
   },
 
   "dependencies": {
     "Microsoft.NETCore.App": {
       "type": "platform",
-      "version": "1.0.0-*"
+      "version": "1.0.0-rc2-3002702"
     },
-    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-*"
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final"
   },
 
   "frameworks": {
     "netcoreapp1.0": {
-      "imports": "portable-net451+win8"
+      "imports": [
+        "dnxcore50",
+        "portable-net451+win8"
+      ]
     }
   }
 }

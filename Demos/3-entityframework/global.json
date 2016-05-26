@@ -1,0 +1,8 @@
+{
+    "projects": [
+        "0-Basics",
+        "1-Migrations",
+        "2-Scaffolding",
+        "3-Testing"
+    ]
+}

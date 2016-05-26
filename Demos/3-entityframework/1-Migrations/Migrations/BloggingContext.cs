@@ -7,7 +7,8 @@ namespace MigrationsApp
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\localdb;Database=DemoMigrations;Integrated Security=true");
+            optionsBuilder.UseSqlServer(
+                @"Server=(localdb)\localdb;Database=DemoMigrations;Integrated Security=true");
         }
 
         public DbSet<Blog> Blogs { get; set; }

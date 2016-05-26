@@ -1,0 +1,16 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.5.0-rc2-24027",
+    "Contoso.Data": {
+      "target": "project"
+    }
+  },
+
+  "frameworks": {
+    "netstandard1.3": {
+      "imports": [ "dnxcore50", "portable-net451+win8" ]
+    }
+  }
+}
