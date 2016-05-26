@@ -11,6 +11,6 @@ Docker (Windows) - https://docs.docker.com/windows/
 
 Docker (Mac) - https://docs.docker.com/mac/ 
 
-.NET Core - http://dotnet.github.io/getting-started/
+.NET Core - https://microsoft.com/net/core/
 
-Entity Framework Core - http://docs.efproject.net/en/latest/getting-started.html
+Entity Framework Core - http://docs.efproject.net/

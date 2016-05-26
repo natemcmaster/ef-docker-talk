@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    build: PortableWebApp/
+    ports: 
+      - "5000:5000"
+    depends_on:
+      - dbserver
+    environment:
+      Npgsql__ConnectionString: 'Server=dbserver;Username=postgres;Database=Northwind'
+      DB_HOSTNAME: dbserver
+  dbserver:
+    image: postgres:9.5
