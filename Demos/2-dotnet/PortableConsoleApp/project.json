@@ -9,10 +9,11 @@
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.0-rc2-3002702"
-    }
+    },
+    "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final"
   },
 
   "frameworks": {
-    "netcoreapp1.0": { }
+    "netcoreapp1.0": {"imports": "portable-net451+win8" }
   }
 }

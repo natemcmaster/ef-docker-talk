@@ -7,7 +7,10 @@ namespace SimpleBloggingApp
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\localdb;Database=DemoBlog;Integrated Security=true");
+            optionsBuilder
+                .UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=StarWarsBlog;Integrated Security=true"
+                , b=>b.SuppressAmbientTransactionWarning())
+                ;
         }
 
         public DbSet<Blog> Blogs { get; set; }

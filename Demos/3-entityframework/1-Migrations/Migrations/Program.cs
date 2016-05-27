@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace MigrationsApp
             using (var db = new BloggingContext())
             {
                 db.Database.EnsureCreated();
+                db.Database.Migrate();
 
                 db.Blogs.Add(new Blog
                 {
