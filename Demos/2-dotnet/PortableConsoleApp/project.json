@@ -1,6 +1,6 @@
 ﻿{
   "version": "1.0.0-*",
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true,
     "debugType": "portable"
   },
@@ -8,11 +8,11 @@
   "dependencies": {
     "Microsoft.NETCore.App": {
       "type": "platform",
-      "version": "1.0.0-*"
+      "version": "1.0.0-rc2-3002702"
     }
   },
 
   "frameworks": {
-    "netcoreapp1.0": {}
+    "netcoreapp1.0": { }
   }
 }
