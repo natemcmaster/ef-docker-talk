@@ -9,6 +9,12 @@
       ]
     }
   },
+  "publishOptions": {
+    "includeFiles": [
+      "config.json",
+      "docker-start.sh"
+    ]
+  },
   "dependencies": {
     "Microsoft.NETCore.App": {
       "type": "platform",
